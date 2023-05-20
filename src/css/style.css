@@ -1,39 +1,43 @@
 body {
     background-color: aquamarine;
-    height: 100vh;
     display: flex;
     justify-content: center;
     font-family: 'Roboto', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 20px;
     color: black;
 }
 
 .container {
     display: grid;
-    grid:
+    grid-template-areas:
         "header header header"
         "hero hero hero"
         "about about about"
         "services services services"
         "projects projects projects"
-        "footer footer footer" / 1fr 1fr 1fr;
+        "footer footer footer";
+    grid-template-columns: repeat(3, 1fr);
     max-width: var(--max-width-size);
     width: 100%;
 }
 
 
+
+
 .header {
-    background-color: azure;
+    background-color: white;
     grid-area: header;
     display: flex;
-    height: 90px;
+    height: 70px;
     padding: 0 30px;
     justify-content: space-between;
     align-items: center;
+    font-weight: 700;
 }
 
-.header .logo {
+.header .logo h1 {
+    font-size: 30px;
     transition: 0.3s ease-in;
 }
 
@@ -44,6 +48,8 @@ body {
 .header .menu .links {
     display: flex;
     gap: 30px;
+    font-size: 25px;
+
 }
 
 .header .menu .links li {
@@ -53,9 +59,12 @@ body {
 }
 
 .header .menu .links li:hover {
-    color: aliceblue;
+    color: white;
     background-color: orangered;
 }
+
+
+
 
 
 .hero {
@@ -69,6 +78,11 @@ body {
     text-transform: uppercase;
     background: url(../images/lemons.jpg) no-repeat center center/cover;
     position: relative;
+}
+
+.hero h2 {
+    font-size: 50px;
+    font-weight: 500;
 }
 
 @-webkit-keyframes animacao-seta {
@@ -92,26 +106,124 @@ body {
 
 
 
+
+
 .about {
     grid-area: about;
-    background-color: blueviolet;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: white;
+}
+
+.informacoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+    padding: 15%;
+    font-weight: 400;
 
 }
+
+.informacoes h3 {
+    font-size: 30px;
+    font-weight: 700;
+
+}
+
+.informacoes a {
+    padding: 15px;
+    border-radius: 15px;
+    transition: 0.3s ease-in;
+}
+
+.informacoes a:hover {
+    color: aliceblue;
+    background-color: orangered;
+}
+
+.about .images.right {
+    background: url(../images/bridge.jpg) center center/cover;
+}
+
+.about .images.left {
+    background: url(../images/sky.jpg) center center/cover;
+}
+
+
+
+
+
 
 .services {
     grid-area: services;
-    background-color: brown;
-
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
+
+.services .left {
+    background-color: blueviolet;
+}
+
+.services .right {
+    background-color: #FFB6C1;
+}
+
+
+
+
 
 .projects {
     grid-area: projects;
     background-color: burlywood;
+    display: flex;
+}
+
+.projects .imagens,
+.projects .imagens img {
+    height: 100%;
+}
+.projects .imagens a {
+    transition: 0.3s ease-in;
 
 }
+.projects .imagens a:hover {
+    opacity: 0.6;
+}
+
+
+
 
 .footer {
     grid-area: footer;
-    background-color: chartreuse;
+    background-color: #90EE90;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 0;
+}
 
+.footer .menu .links,
+.footer .social {
+    display: flex;
+    gap: 40px;
+}
+
+.footer .logo,
+.footer .menu .links li,
+.footer .social a {
+    transition: 0.3s ease-in;
+}
+
+.footer .logo:hover,
+.footer .menu .links li:hover,
+.footer .social a:hover {
+    color: white;
+}
+
+.footer .social a {
+    font-size: 35px;
 }
