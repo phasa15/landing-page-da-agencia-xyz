@@ -1,3 +1,9 @@
+@media screen and (orientation: portrait) {
+    .hero {
+        height: 59vh;
+    }
+}
+
 @media (max-width: 900px) {
     .header .menu .links {
 
