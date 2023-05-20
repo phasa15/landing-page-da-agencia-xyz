@@ -43,7 +43,7 @@ body {
 
 .header .logo h1 {
     font-size: 30px;
-    transition: 0.3s ease-in;
+    transition: 0.2s ease-in;
 }
 
 .header .logo:hover {
