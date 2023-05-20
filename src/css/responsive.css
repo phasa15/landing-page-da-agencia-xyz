@@ -1,0 +1,99 @@
+@media (max-width: 900px) {
+    .header .menu .links {
+
+        font-size: 20px;
+
+    }
+
+    .hero h2 {
+        font-size: 40px;
+    }
+
+}
+
+@media (max-width: 650px) {
+    .hero {
+        height: 59vh;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 550px) {
+    .projects {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .about {
+        grid:
+            "images-right" 1fr "informacoes-right" 1fr "images-left" 1fr "informacoes-left" 1fr;
+    }
+
+    .about .informacoes.right {
+        grid-area: informacoes-right;
+
+    }
+
+    .about .informacoes.left {
+        grid-area: informacoes-left;
+
+    }
+
+    .about .images.right {
+        grid-area: images-right;
+
+    }
+
+    .about .images.left {
+        grid-area: images-left;
+
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .footer .menu .links,
+    .footer .social {
+        gap: 30px;
+    }
+
+    .footer .social a {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .footer .menu .links {
+        flex-direction: column;
+    }
+
+    .footer .social a {}
+}
+
+@media (max-width: 360px) {
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .header .logo h1 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 300px) {
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .header .logo h1 {
+        font-size: 20px;
+    }
+}
